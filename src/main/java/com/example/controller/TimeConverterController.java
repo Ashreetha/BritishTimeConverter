@@ -22,7 +22,7 @@ public class TimeConverterController {
     }
 
     @GetMapping("/{time}")
-    public String getTimeInBritishWay(@PathVariable @NotNull @Length(min = 4, max = 5) String time){
+    public String getTimeInBritishWay(@PathVariable @Length(min = 4, max = 5) String time){
         return timeConverterService.convert(time);
     }
 }
