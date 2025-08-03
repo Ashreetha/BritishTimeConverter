@@ -24,14 +24,14 @@ public class TimeConverterService{
 
         // Special cases
         if (hour == 0 && minute == 0) return "midnight";
-        if (hour == 12 && minute == 0) return "noon";
+        else if (hour == 12 && minute == 0) return "noon";
 
         if (minute == 0) return getHoursInWords(hour) + " o'clock";
-        if (minute == 15) return "quarter past " + getHoursInWords(hour);
-        if (minute == 30) return "half past " + getHoursInWords(hour);
-        if (minute == 45) return "quarter to " +getHoursInWords(hour + 1);
+        else if (minute == 15) return "quarter past " + getHoursInWords(hour);
+        else if (minute == 30) return "half past " + getHoursInWords(hour);
+        else if (minute == 45) return "quarter to " +getHoursInWords(hour + 1);
 
-        if (minute < 30) {
+        else if (minute < 30) {
             return getMinutesInWords(minute) + " past " + getHoursInWords(hour);
         } else {
             return getMinutesInWords(60 - minute) + " to " +getHoursInWords(hour + 1);
