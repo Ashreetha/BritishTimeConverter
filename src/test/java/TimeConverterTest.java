@@ -1,11 +1,11 @@
-import com.example.BritishTimeConverter;
+import com.example.service.TimeConverterService;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BritishTimeConverterTest {
+public class TimeConverterTest {
 
-    private final BritishTimeConverter converter = new BritishTimeConverter();
+    private final TimeConverterService converter = new TimeConverterService();
 
     @Test
     public void testMidnight() {
