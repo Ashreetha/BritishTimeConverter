@@ -29,7 +29,7 @@ public class TimeConverterController {
     public String getTimeInBritishWay(@PathVariable
                                           @Length(min = 4, max = 5)
                                           @DateTimeFormat(pattern = "H:mm")
-                                      LocalTime time){
-        return timeConverterService.convert(time.toString());
+                                      String time){
+        return timeConverterService.convert(time);
     }
 }

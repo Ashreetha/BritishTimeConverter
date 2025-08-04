@@ -1,8 +1,15 @@
 package com.example.exception;
 
+import java.time.LocalDateTime;
+
 public class ErrorCode {
-    int code;
+    LocalDateTime dateTime;
     String message;
+
+    public ErrorCode(LocalDateTime now, String msg) {
+        this.message = msg;
+        this.dateTime = now;
+    }
 
     public String getMessage() {
         return message;
@@ -12,11 +19,11 @@ public class ErrorCode {
         this.message = message;
     }
 
-    public int getCode() {
-        return code;
+    public LocalDateTime getTime() {
+        return dateTime;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setCode(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 }

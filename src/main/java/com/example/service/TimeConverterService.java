@@ -17,7 +17,7 @@ public class TimeConverterService{
         try {
             time = LocalTime.parse(input, DateTimeFormatter.ofPattern("H:mm"));
         } catch (DateTimeParseException e) {
-            throw new InvalidInputDataException("Supplied time input is invaild. Please use 24 hour time pattern of HH:MM as input");
+            throw new InvalidInputDataException("Supplied time input is invaild. Please use 24 hour time pattern of H:mm as input");
         }
         int hour = time.getHour();
         int minute = time.getMinute();
